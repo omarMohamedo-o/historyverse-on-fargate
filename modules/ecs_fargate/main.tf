@@ -1,0 +1,1 @@
+// ecs_fargate module stub
