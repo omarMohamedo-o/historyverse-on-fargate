@@ -1,0 +1,29 @@
+name: Terraform CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    name: Terraform Quality Gate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.9.5"
+
+      - name: Verify Formatting
+        run: terraform fmt -check -recursive
+
+      - name: Initialize Modules (No Backend)
+        run: terraform init -backend=false
+
+      - name: Validate Syntax & Resource Graphs
+        run: terraform validate
