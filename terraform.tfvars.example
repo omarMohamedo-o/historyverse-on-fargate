@@ -14,7 +14,7 @@ enable_nat_gateway   = true
 single_nat_gateway   = true
 
 # Compute (ECS Fargate)
-container_image = "0marmohamed/historyverse_chatbot:latest"
+container_image = "ghcr.io/omarmohamedo-o/historyverse-chatbot:latest"
 container_port  = 8000
 cpu             = 512   # 0.5 vCPU
 memory          = 1024  # 1 GB

@@ -49,7 +49,7 @@ variable "single_nat_gateway" {
 variable "container_image" {
   type        = string
   description = "Docker image URI (from Docker Hub or AWS ECR repository)."
-  default     = "0marmohamed/historyverse_chatbot:latest"
+  default     = "ghcr.io/omarmohamedo-o/historyverse-chatbot:latest"
 }
 
 variable "container_port" {
