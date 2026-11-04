@@ -1,6 +1,13 @@
 # 🏛️ HistoryVerse on AWS ECS Fargate
 
+[![Terraform CI](https://github.com/omarMohamedo-o/historyverse-on-fargate/actions/workflows/terraform-ci.yml/badge.svg)](https://github.com/omarMohamedo-o/historyverse-on-fargate/actions/workflows/terraform-ci.yml)
+[![Companion Application](https://img.shields.io/badge/Companion%20Repo-HistoryVerse--Chatbot-blue.svg)](https://github.com/omarMohamedo-o/HistoryVerse-Chatbot)
+[![Container Image](https://img.shields.io/badge/Container%20Image-GHCR-success.svg)](https://github.com/omarMohamedo-o/HistoryVerse-Chatbot/pkgs/container/historyverse-chatbot)
+
 Production-grade, modular Infrastructure as Code (IaC) for deploying the **HistoryVerse** Multimodal Historical AI Agent microservices on **AWS ECS Fargate** with High Availability, Autoscaling, and Zero-Trust Networking.
+
+- **Application Repository**: [omarMohamedo-o/HistoryVerse-Chatbot](https://github.com/omarMohamedo-o/HistoryVerse-Chatbot)
+- **Container Registry**: `ghcr.io/omarmohamedo-o/historyverse-chatbot:latest`
 
 ---
 
@@ -94,7 +101,7 @@ terraform fmt -check -recursive
 | `project_name` | Resource name prefix and tag | `historyverse` |
 | `environment` | Deployment stage (`dev`, `staging`, `production`) | `production` |
 | `vpc_cidr` | CIDR block for the VPC | `10.0.0.0/16` |
-| `container_image` | Docker image URI for HistoryVerse | `0marmohamed/historyverse_chatbot:latest` |
+| `container_image` | Docker image URI for HistoryVerse | `ghcr.io/omarmohamedo-o/historyverse-chatbot:latest` |
 | `container_port` | FastAPI HTTP listening port | `8000` |
 | `cpu` | Fargate CPU allocation (512 = 0.5 vCPU) | `512` |
 | `memory` | Fargate Memory allocation in MiB | `1024` |
